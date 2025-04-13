@@ -1,6 +1,6 @@
 # 👁️‍🗨️ Human Tracking & Counting from CCTV Videos (Multi-Camera)
 
-Track and count **unique humans** in **multiple simultaneous CCTV feeds** using **YOLOv8** for detection and **DeepSORT** for tracking. This system efficiently identifies individuals even across different camera angles, minimizing duplicates and false counts.
+🧠 Track and count **unique humans** in **multiple simultaneous CCTV feeds** using **YOLOv8** for detection and **DeepSORT** for tracking. This system efficiently identifies individuals even across different camera angles, minimizing duplicates and false counts.
 
 ---
 
@@ -12,7 +12,7 @@ Track and count **unique humans** in **multiple simultaneous CCTV feeds** using 
 ✅ Real-time count of unique individuals  
 ✅ Resilient to occlusion and background noise  
 ✅ Graceful interruption (Ctrl+C safe)  
-✅ Outputs saved with bounding boxes and IDs
+✅ Outputs saved with bounding boxes and IDs in the folder `/output/`
 
 ---
 
@@ -30,3 +30,25 @@ Track and count **unique humans** in **multiple simultaneous CCTV feeds** using 
 
 ## 📁 Project Structure
 
+```plaintext
+├── main.py                # Main execution script (multi-threaded)
+├── models/
+│   └── yolov8s.pt         # YOLOv8 weights
+├── data/
+│   ├── video1.mp4
+│   ├── video2.mp4
+│   ├── video3.mp4
+│   └── video4.mp4
+├── output/                # Processed output videos
+├── utils/
+│   ├── detector.py        # YOLO detection logic
+│   ├── tracker.py         # DeepSORT tracker initialization
+│   └── counter.py         # ID tracking and counting logic
+└── README.md
+
+## ⚙️ How It Works
+
+- **Detection**: `detector.py` uses YOLOv8 to detect people.  
+- **Tracking**: `tracker.py` integrates DeepSORT to assign IDs.  
+- **Counting**: `counter.py` keeps track of total unique people detected.  
+- **Multi-threading**: `main.py` launches one thread per video file to parallelize processing.
