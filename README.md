@@ -1,5 +1,11 @@
 # 👁️‍🗨️ Human Tracking & Counting from CCTV Videos (Multi-Camera)
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Tracking-green?logo=github)
+![DeepSORT](https://img.shields.io/badge/DeepSORT-MultiObjectTracking-orange)
+![License](https://img.shields.io/github/license/HarshitaMav/Human-Detection-from-CCTV-Footage)
+![Stars](https://img.shields.io/github/stars/HarshitaMav/Human-Detection-from-CCTV-Footage?style=social)
+
 🧠 Track and count **unique humans** in **multiple simultaneous CCTV feeds** using **YOLOv8** for detection and **DeepSORT** for tracking. This system efficiently identifies individuals even across different camera angles, minimizing duplicates and false counts.
 
 ---
@@ -94,6 +100,11 @@ Each video feed shows:
 - Bounding boxes on each detected person
 - Real-time assigned ID
 - Unique person count at the top left
+- 
+## 📸 Example Output
+### 🎯 Person Detection + ID Assignment + Unique Person Count Display:
+!(screenshots/Screenshot 2025-04-13 174626.png)
+!(screenshots/Screenshot 2025-04-13 174851.png)
 
 ---
 
