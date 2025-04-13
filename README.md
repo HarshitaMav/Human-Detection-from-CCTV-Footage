@@ -45,6 +45,8 @@
 │   ├── tracker.py         # DeepSORT tracker initialization
 │   └── counter.py         # ID tracking and counting logic
 └── README.md
+```
+---
 
 ## ⚙️ How It Works
 
@@ -52,3 +54,48 @@
 - **Tracking**: `tracker.py` integrates DeepSORT to assign IDs.  
 - **Counting**: `counter.py` keeps track of total unique people detected.  
 - **Multi-threading**: `main.py` launches one thread per video file to parallelize processing.
+
+---
+
+## 📦 Dependencies
+
+Install the required packages with:
+
+```bash
+pip install -r requirements.txt
+```
+Or install them individually:
+```
+pip install ultralytics opencv-python deep-sort-realtime torch
+```
+---
+
+## 🛠️ Run the Project
+Place your input videos inside the data/ folder and run:
+
+```bash
+python main.py
+```
+- Press **Ctrl+C** anytime to gracefully stop the processing.
+- Processed videos will be saved in the output/ folder.
+
+---
+
+## 📌 Notes
+- All video outputs are stored in the `output/` directory.
+- Incomplete videos or forcefully terminated processing may corrupt `.mp4` files.
+- Ensure input videos are readable and not locked by another process.
+- Use `yolov8s.pt` or upgrade to larger models (e.g., `yolov8m.pt`) for better accuracy if GPU resources allow.
+
+---
+
+## ✨ Example Output
+Each video feed shows:
+- Bounding boxes on each detected person
+- Real-time assigned ID
+- Unique person count at the top left
+
+---
+
+## 🤝 Contributions
+Feel free to fork, enhance, or contribute! PRs and issues welcome.
