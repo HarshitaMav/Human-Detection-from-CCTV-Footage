@@ -103,8 +103,8 @@ Each video feed shows:
 - 
 ## 📸 Example Output
 ### 🎯 Person Detection + ID Assignment + Unique Person Count Display:
-![Ouput 1](screenshots/Screenshot 2025-04-13 174626.png)
-![Output 2](screenshots/Screenshot 2025-04-13 174851.png)
+![Ouput 1](screenshots/Output1.png)
+![Output 2](screenshots/Output3.png)
 
 ---
 
